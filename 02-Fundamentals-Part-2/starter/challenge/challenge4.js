@@ -1,7 +1,4 @@
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-let tips = [];
-let totals = [];
 
 const in_between = (smaller, number, bigger) =>{
     return number >= smaller && number <= bigger;
@@ -12,15 +9,27 @@ const calcTip = bill => {
 const calcTotal = bill => {
     return calcTip(bill) + bill;
 }
+const initTips = bills => {
+    let tips = [];
+    for(let i=0; i<bills.length; i++){
+        tips.push(calcTip(bills[i]));
+    }
+    return tips;
+}
+const initTotal = bills => {
+    let totals = [];
+    for(let i=0; i<bills.length; i++){
+        totals.push(calcTotal(bills[i]));
+    }
+    return totals;
+}
 const msg = (bill,tip,total) => {
     console.log(`Bill is ${bill}, Tip is ${tip.toFixed(2)}, Total is ${total}`);
 }
 
-for(let i=0; i<bills.length; i++){
-    tips.push(calcTip(bills[i]));
-    totals.push(calcTotal(bills[i]));
-}
-
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips = initTips(bills);
+let totals = initTotal(bills);
 
 for(let i=0; i<10; i++){
     msg(bills[i], tips[i], totals[i]);
