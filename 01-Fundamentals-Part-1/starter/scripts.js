@@ -24,4 +24,3 @@ const GRAVITY = 9.81;
 
 //let keyword for mutable vars
 let age = 22;
-

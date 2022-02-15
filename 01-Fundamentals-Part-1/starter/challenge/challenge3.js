@@ -1,11 +1,10 @@
+let dolphinsGame1 = 96;
+let dolphinsGame2 = 108;
+let dolphinsGame3 = 89;
 
-let dolphinsGame1 = 96
-let dolphinsGame2 = 108
-let dolphinsGame3 = 89
-
-let koalasGame1 = 88
-let koalasGame2 = 91
-let koalasGame3 = 110
+let koalasGame1 = 88;
+let koalasGame2 = 91;
+let koalasGame3 = 110;
 
 // Bonus 1
 // let dolphinsGame1 = 97
@@ -28,9 +27,8 @@ let koalasGame3 = 110
 let dolphinsAverage = (dolphinsGame1 + dolphinsGame2 + dolphinsGame3) / 3;
 let koalasAverage = (koalasGame1 + koalasGame2 + koalasGame3) / 3;
 
-
-if(dolphinsAverage > koalasAverage) console.log("Dolphins win!");
-else if(dolphinsAverage < koalasAverage) console.log("Koalas win!");
+if (dolphinsAverage > koalasAverage) console.log("Dolphins win!");
+else if (dolphinsAverage < koalasAverage) console.log("Koalas win!");
 else console.log("Both teams draw!");
 
 //Bonus 1 & 2
