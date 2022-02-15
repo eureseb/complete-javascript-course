@@ -1,3 +1,4 @@
+/*
 let js = 'amazing';
 
 if(js === 'amazing') 
@@ -16,3 +17,11 @@ console.log(typeof variable)
 variable = [1, 2, 3, 4];
 
 console.log(variable);
+*/
+
+//const keyword for FINAL vars
+const GRAVITY = 9.81;
+
+//let keyword for mutable vars
+let age = 22;
+
