@@ -1,48 +1,37 @@
-/*
-    mass : kg
-    height : meter
 
-    BMI = MASS / HEIGHT ** 2
-*/
-class Person {
-    
-    constructor(height, weight){
-        this.height = height;
-        this.weight = weight;
-    }
-    getBMI() {
-        return this.weight / this.height**2;
-    }
-    getAnalysis(){
-        return `Mark weights ${this.weight} kg and is ${this.height} m tall.`;
-    }
+function getBMI(weight, height){
+    return weight / height**2;
 }
-let compareBMI = (person1, person2) => {
-    return person1.getBMI() > person2.getBMI();
-} 
+function hasHigherBmi(firstBMI, secondBMI){
+    return firstBMI > secondBMI;
+}
+function getAnalysis(name, weight, height){
+    return `${name} weights ${weight} kg and is ${height} m tall.`;
+}
 
+let markHeight = 1.69;
+let markWeight = 78;
 
-let Mark = new Person(78, 1.69);
-let John = new Person(92, 1.95);
-//markHigherBMI must be Boolean var
-let markHigherBMI = compareBMI(Mark, John);
+let johnHeight = 1.95;
+let johnWeight = 92;
 
+let markBmi = getBMI(markWeight, markWeight);
+let johnBmi = getBMI(johnWeight, johnWeight);
+let markHigherBMI = hasHigherBmi(markBmi, johnBmi);
 
-console.log(`Data 1: ${Mark.getAnalysis()} ${John.getAnalysis()}`)
-if(markHigherBMI)
-    console.log("Mark's BMI is higher");
-else console.log("Mark's BMI is not higher");
+console.log(`Data 1: ${getAnalysis("Mark",markWeight,markHeight)} ${getAnalysis("John",johnWeight,johnHeight)}`)
+console.log(`Mark's BMI is ${markHigherBMI ? "higher" : "not higher"}`);
 
-Mark.weight = 95;
-Mark.height = 1.88;
+markHeight = 1.88;
+markWeight = 95;
 
-John.weight = 85;
-John.height = 1.76;
+johnHeight = 1.76;
+johnWeight = 85;
 
-markHigherBMI = compareBMI(Mark, John);
+markBmi = getBMI(markWeight, markWeight);
+johnBmi = getBMI(johnWeight, johnWeight);
 
-console.log(`Data 2: ${Mark.getAnalysis()} ${John.getAnalysis()}`)
-if(markHigherBMI)
-    console.log("Mark's BMI is higher");
-else console.log("Mark's BMI is not higher");
+markHigherBMI = hasHigherBmi(markBmi, johnBmi);
 
+console.log(`Data 2: ${getAnalysis("Mark",markWeight,markHeight)} ${getAnalysis("John",johnWeight,johnHeight)}`)
+console.log(`Mark's BMI is ${markHigherBMI ? "higher" : "not higher"}`);
