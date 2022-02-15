@@ -1,4 +1,3 @@
-
 const calculateTip = (bill) => {
     return bill <= 300 && bill >= 50 ? bill*.15 : bill*.2;
 }

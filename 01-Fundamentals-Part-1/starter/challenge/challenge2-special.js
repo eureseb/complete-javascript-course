@@ -27,7 +27,6 @@ const compareBMI = (bmi1, bmi2) => {
     return bmi1 > bmi2;
 } 
 
-
 let Mark = new Person(78, 1.69);
 let John = new Person(92, 1.95);
 //markHigherBMI must be Boolean var
@@ -48,6 +47,6 @@ markHigherBMI = compareBMI(Mark.getBMI(), John.getBMI());
 
 console.log(`Data 2: ${Mark.getAnalysis()} ${John.getAnalysis()}`)
 if(markHigherBMI)
-    console.log(`Mark's BMI(${Mark.getBMI().toFixed(1)}) is higher than John's BMI (${John.getBMI().toFixed(1)})!`);
-else console.log(`John's BMI(${John.getBMI().toFixed(1)}) is higher than Marks's BMI(${Mark.getBMI().toFixed(1)})!`);
+    console.log(` Mark's BMI(${Mark.getBMI().toFixed(1)}) is higher than John's BMI (${John.getBMI().toFixed(1)})!`);
+else console.log(` John's BMI(${John.getBMI().toFixed(1)}) is higher than Marks's BMI(${Mark.getBMI().toFixed(1)})!`);
 
