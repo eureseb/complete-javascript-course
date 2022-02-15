@@ -23,7 +23,7 @@ class Person {
         return `Mark weights ${this.weight} kg and is ${this.height} m tall.`;
     }
 }
-let compareBMI = (bmi1, bmi2) => {
+const compareBMI = (bmi1, bmi2) => {
     return bmi1 > bmi2;
 } 
 
