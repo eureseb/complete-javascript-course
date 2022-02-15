@@ -46,7 +46,8 @@ John.setWeight(1.76);
 markHigherBMI = compareBMI(Mark.getBMI(), John.getBMI());
 
 console.log(`Data 2: ${Mark.getAnalysis()} ${John.getAnalysis()}`)
+
 if(markHigherBMI)
-    console.log(` Mark's BMI(${Mark.getBMI().toFixed(1)}) is higher than John's BMI (${John.getBMI().toFixed(1)})!`);
-else console.log(` John's BMI(${John.getBMI().toFixed(1)}) is higher than Marks's BMI(${Mark.getBMI().toFixed(1)})!`);
+    console.log(`Mark's BMI(${Mark.getBMI().toFixed(1)}) is higher than John's BMI (${John.getBMI().toFixed(1)})!`);
+else console.log(`John's BMI(${John.getBMI().toFixed(1)}) is higher than Marks's BMI(${Mark.getBMI().toFixed(1)})!`);
 
