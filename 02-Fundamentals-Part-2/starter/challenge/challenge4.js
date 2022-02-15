@@ -31,7 +31,12 @@ const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 let tips = initTips(bills);
 let totals = initTotal(bills);
 
-for(let i=0; i<10; i++){
-    msg(bills[i], tips[i], totals[i]);
-}
+let everything = {
+    bills, 
+    tips, 
+    totals
+};
 
+for(let i=0; i<10; i++){
+    msg(everything.bills[i], everything.tips[i], everything.totals[i]);
+}
