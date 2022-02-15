@@ -26,17 +26,29 @@ const initTotal = bills => {
 const msg = (bill,tip,total) => {
     console.log(`Bill is ${bill}, Tip is ${tip.toFixed(2)}, Total is ${total}`);
 }
+const printLogs = logs => {
+    for(let i=0; i<10; i++){
+        msg(logs.bills[i], logs.tips[i], logs.totals[i]);
+    }
+}
 
+//Sample data
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-let tips = initTips(bills);
-let totals = initTotal(bills);
 
-let everything = {
+//For bills value between 50 ang 300, 20% charge. Everything else is 15% of bill;
+//instantializes tip array;
+const tips = initTips(bills);
+
+//Total per bill = bill + tip;
+//instantializes totals array;
+const totals = initTotal(bills);
+
+//Collection of gross bill, tips, and net total;
+const logs = {
     bills, 
     tips, 
     totals
 };
 
-for(let i=0; i<10; i++){
-    msg(everything.bills[i], everything.tips[i], everything.totals[i]);
-}
+//not the best solution pero it was fun building haha
+printLogs(logs);
